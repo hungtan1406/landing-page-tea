@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  /* Screens */
+  --breakpoint-sm: 30rem;
+  /*480px*/
+  --breakpoint-md: 48rem;
+  /*768px*/
+  --breakpoint-lg: 80rem;
+  /*1280px*/
+  --breakpoint-xl: 87.5rem;
+  /*1400px*/
+  --breakpoint-2xl: 96rem;
+  /*1536px*/
+
+  /* font */
+  --font-lobster: "Lobster", serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* colors */
+  --color-p-50: oklch(0.982 0.018 155.826);
+  --color-p-100: oklch(0.962 0.044 156.743);
+  --color-p-200: oklch(0.925 0.084 155.995);
+  --color-p-300: oklch(0.871 0.15 154.449);
+  --color-p-400: oklch(0.792 0.209 151.711);
+  --color-p-500: oklch(0.723 0.219 149.579);
+  --color-p-600: oklch(0.627 0.194 149.214);
+  --color-p-700: oklch(0.527 0.154 150.069);
+  --color-p-800: oklch(0.448 0.119 151.328);
+  --color-p-900: oklch(0.393 0.095 152.535);
+  --color-p-950: oklch(0.266 0.065 152.934);
+
+  --color-n-50: oklch(0.985 0.002 247.839);
+  --color-n-100: oklch(0.967 0.003 264.542);
+  --color-n-200: oklch(0.928 0.006 264.531);
+  --color-n-300: oklch(0.872 0.01 258.338);
+  --color-n-400: oklch(0.707 0.022 261.325);
+  --color-n-500: oklch(0.551 0.027 264.364);
+  --color-n-600: oklch(0.446 0.03 256.802);
+  --color-n-700: oklch(0.373 0.034 259.733);
+  --color-n-800: oklch(0.278 0.033 256.848);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  max-width: 100%;
+  overflow-x: clip;
+  max-width: 1536px;
+
+  @media (min-width: theme('screens.md')) {
+    padding-inline: 4.5rem;
+    padding-block: 3rem;
+  }
+}
+
+@layer base {
+  html{
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-base font-inter overflow-x-clip
+  }
+
+  p {
+    @apply text-sm leading-7 font-inter
+  }
+
+}
+
+@layer components {
+  .btn {
+      @apply flex items-center justify-center gap-2 tracking-wider px-4 py-2 rounded-xs text-sm text-white bg-p-900 hover:bg-p-700 border-p-900 transition-colors duration-500 font-inter lg:py-3 lg:px-9
+    }
+  
+  .text-gradient {
+    background: linear-gradient(to right, var(--color-p-600), var(--color-p-900));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+  }
+
+  .sub-heading{
+    @apply text-sm font-medium uppercase font-inter text-p-900
+  }
+
+  .main-heading{
+    @apply mt-2 text-2xl tracking-wide capitalize lg:text-3xl font-lobster
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+@layer utilities {
+  .tabContainer {
+    @apply flex flex-col w-full gap-8 md:flex-row md:gap-16;
+
+    > div {
+      @apply w-full my-auto;
+    }
+
+    h3 {
+      @apply text-3xl font-bold capitalize lg:text-4xl;
+    }
+
+    h4{
+      @apply mt-4 text-xl font-semibold text-p-900 md:mt-8
+    }
+
+    p{
+      @apply max-w-xl mt-2
+    }
+  }
+}
+
+.feature-card {
+  @apply h-[400px] w-[368px] flex flex-col justify-center items-center p-[36px] gap-[36px] [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] transition-all duration-500 bg-center bg-no-repeat bg-cover
+}
+
+#features h3 {
+  @apply relative z-0 text-xl font-semibold tracking-widest text-white uppercase transition-all duration-500 translate-y-16 group-hover:translate-y-4
+}
+
+#features p {
+  @apply relative z-0 text-center text-white transition-all duration-500 translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-0
+}
+
