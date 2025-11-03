@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### 🌿 Landing Page Trà – Tea Station
 
-## Getting Started
+Dự án là trang đích (Landing Page) giới thiệu thương hiệu trà hiện đại, được xây dựng bằng Next.js (App Router) với thiết kế tinh gọn, tốc độ cao và thân thiện với thiết bị di động.
+Trang web trình bày các loại trà, câu chuyện thương hiệu, nhà phân phối, sản phẩm nổi bật và phần liên hệ đăng ký nhận tin.
 
-First, run the development server:
+---
+<img width="2537" height="1222" alt="image" src="https://github.com/user-attachments/assets/97530c96-3647-4d94-bf19-b6d760186622" />
 
-```bash
+
+### ✨ Giao diện nổi bật
+- Phần mở đầu (Hero section): Tiêu đề, mô tả ngắn, nút “Khám phá ngay”.
+- Dải logo nhà phân phối: Costco, Walmart, Target, Whole Foods...
+- Danh mục sản phẩm: Matcha, Trà trắng, Oolong, Trà đen – mỗi loại có hình, tiêu đề, mô tả.
+- Sản phẩm bán chạy: Nổi bật với ảnh sản phẩm và khối CTA hấp dẫn.
+- Câu chuyện thương hiệu: Giới thiệu triết lý và giá trị của thương hiệu.
+- Thống kê thương hiệu: Các số liệu trực quan về khách hàng, chi nhánh, sản phẩm.
+- Liên hệ & Đăng ký nhận tin: Giao diện đẹp, dễ thao tác.
+- Tốc độ cao – tối ưu SEO – responsive 100%.
+
+---
+### 🧰 Công nghệ sử dụng
+Framework: [Next.js 15] 
+
+Ngôn ngữ: JavaScript 
+
+Giao diện: Tailwindcss
+
+Triển khai: Vercel
+
+---
+
+### 📁 Cấu trúc dự án
+```
+├─ app/               
+├─ components/        
+├─ data/             
+├─ public/           
+├─ eslint.config.mjs  
+├─ next.config.mjs    
+├─ postcss.config.mjs 
+├─ jsconfig.json      
+└─ package.json       
+```
+---
+### ⚙️ Cài đặt
+```
+git clone https://github.com/hungtan1406/landing-page-tea.git
+cd landing-page-tea
+npm install
+```
+💻 Chạy ở chế độ phát triển
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
+### 🔮 Hướng phát triển
+- Kết nối form đăng ký với Mailchimp / Resend.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Thêm trang chi tiết sản phẩm hoặc giỏ hàng nhỏ.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Hỗ trợ đa ngôn ngữ (tiếng Anh / tiếng Việt).
 
-## Learn More
+- Thêm kiểm thử (Vitest, Jest).
 
-To learn more about Next.js, take a look at the following resources:
+- Triển khai CI/CD tự động trên GitHub Actions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 💬 Liên hệ
+- 📧 Email: hungtanth1406@gmail.com
+- 🌐 GitHub: github.com/hungtan1406
+---
+### 🌐 Demo
+- 🌐 Demo: https://landing-page-tea.vercel.app
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
